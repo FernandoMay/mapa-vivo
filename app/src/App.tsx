@@ -1,25 +1,18 @@
-﻿import React, { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { loadParticipationData } from './lib/dataService';
 import { ParticipationChart } from './components/ParticipationChart';
 import { InsightCard } from './components/InsightCard';
 
-function App() {
+export default function App() {
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [selectedState, setSelectedState] = useState<string>('Nacional');
 
   useEffect(() => {
-    loadParticipationData()
-      .then(res => {
-        setData(res);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setError(err.message);
-        setLoading(false);
-      });
+    loadParticipationData().then(res => {
+      setData(res);
+      setLoading(false);
+    });
   }, []);
 
   if (loading) return (
@@ -27,17 +20,6 @@ function App() {
       <div className="text-center">
         <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
         <p className="text-lg text-gray-600 font-medium">Cargando datos oficiales del INE...</p>
-      </div>
-    </div>
-  );
-
-  if (error) return (
-    <div className="flex h-screen items-center justify-center font-sans bg-gray-50 p-4">
-      <div className="text-center bg-white p-8 rounded-3xl shadow-lg border border-red-100 max-w-md">
-        <div className="text-red-500 text-5xl mb-4">⚠️</div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Error de Datos</h2>
-        <p className="text-gray-600 mb-6">{error}</p>
-        <p className="text-sm text-gray-400">Verifica que el archivo /data/participation_data_v2.json exista en la carpeta public.</p>
       </div>
     </div>
   );
