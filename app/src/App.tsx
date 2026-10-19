@@ -73,14 +73,14 @@ function App() {
             <div className="lg:col-span-2 bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
               <ParticipationChart 
                 data={data} 
-                title={\Participación: \\} 
+                title={Participación: } 
                 stateFilter={selectedState === 'Nacional' ? undefined : selectedState}
               />
             </div>
             <div className="space-y-4">
               <InsightCard 
                 title="Promedio General" 
-                value={\\%\} 
+                value={${avgParticipation}%} 
                 description=" la participación media consolidada a través de los ciclos analizados."
               />
               <InsightCard 
@@ -103,17 +103,17 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <InsightCard 
               title="Máxima Participación" 
-              value={\\%\} 
-              description={\Observado en \. El techo de movilización ciudadana.\}
+              value={${(maxState.pct_Participación * 100).toFixed(2)}%} 
+              description={Observado en . El techo de movilización ciudadana.}
             />
             <InsightCard 
               title="Mínima Participación" 
-              value={\\%\} 
-              description={\Observado en \. El punto crítico de abstención.\}
+              value={${(minState.pct_Participación * 100).toFixed(2)}%} 
+              description={Observado en . El punto crítico de abstención.}
             />
             <InsightCard 
               title="Brecha Electoral" 
-              value={\\ pts%\} 
+              value={${diff} pts%} 
               description="La diferencia abismal entre el estado más activo y el menos activo."
               highlight={true}
             />
