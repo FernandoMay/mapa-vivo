@@ -46,8 +46,6 @@ function App() {
       </header>
 
       <main className="max-w-6xl mx-auto space-y-24">
-        
-        {/* STATE SELECTOR - Layer 2 Experience */}
         <div className="flex justify-center mb-8">
           <div className="bg-white p-2 rounded-2xl shadow-sm border border-gray-200 flex items-center gap-3">
             <span className="pl-4 text-sm font-bold text-gray-500 uppercase">Explorar Estado:</span>
@@ -61,7 +59,6 @@ function App() {
           </div>
         </div>
 
-        {/* ACT 1: THE MACRO TREND */}
         <section className="space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
@@ -72,7 +69,6 @@ function App() {
               Datos verificados CCPC
             </div>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
               <ParticipationChart 
@@ -97,7 +93,6 @@ function App() {
           </div>
         </section>
 
-        {/* ACT 2: THE CONTRASTS */}
         <section className="space-y-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900">Acto II: Los Contrastes Territoriales</h2>
@@ -105,7 +100,6 @@ function App() {
               La democracia no es uniforme. Analizamos la brecha entre los estados con mayor y menor movilización.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <InsightCard 
               title="Máxima Participación" 
@@ -124,7 +118,6 @@ function App() {
               highlight={true}
             />
           </div>
-
           <div className="bg-blue-900 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden">
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-4">Análisis Editorial</h3>
@@ -136,7 +129,6 @@ function App() {
           </div>
         </section>
 
-        {/* ACT 3: PLACEHOLDER FOR SOCIODEMOGRAPHIC DATA */}
         <section className="space-y-8 pb-24">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900">Acto III: El Espejo Social</h2>
@@ -148,7 +140,6 @@ function App() {
             Cargando análisis sociodemográfico...
           </div>
         </section>
-
       </main>
 
       <footer className="max-w-6xl mx-auto mt-24 py-12 border-t border-gray-200 text-center">
