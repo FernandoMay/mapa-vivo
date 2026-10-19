@@ -1,0 +1,8 @@
+﻿node_modules/
+dist/
+.vite/
+.env
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
