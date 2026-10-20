@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { loadParticipationData } from './lib/dataService';
 import { ParticipationChart } from './components/ParticipationChart';
 import { InsightCard } from './components/InsightCard';
@@ -18,8 +18,8 @@ function App() {
   if (loading) return (
     <div className="flex h-screen items-center justify-center bg-slate-50">
       <div className="text-center">
-        <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-        <p className="text-xl text-slate-600 font-semibold tracking-tight">Sincronizando datos del INE...</p>
+        <div className="w-16 h-16 border-4 border-ine-plum border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+        <p className="text-xl text-text-muted font-medium">Sincronizando datos del INE...</p>
       </div>
     </div>
   );
@@ -71,7 +71,7 @@ function App() {
                 <span className="material-symbols-outlined text-[14px]">verified</span> Datos verificados CCPC
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight text-text-primary leading-tight">
+            <h1 className="text-4xl md:text-5xl font-black tracking-tight text-text-primary leading-tight font-headline">
               El Ritmo Nacional: <span className="text-ine-plum">Evolución de la participación</span>
             </h1>
             <p className="text-lg text-text-muted max-w-3xl leading-relaxed">
@@ -104,7 +104,7 @@ function App() {
 
         <section className="space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="text-4xl font-black tracking-tight text-text-primary">Los Contrastes Territoriales</h2>
+            <h2 className="text-4xl font-black tracking-tight text-text-primary font-headline">Los Contrastes Territoriales</h2>
             <p className="text-lg text-text-muted leading-relaxed">
               La democracia no es uniforme. Analizamos la brecha entre los estados con mayor y menor movilización.
             </p>
@@ -131,7 +131,7 @@ function App() {
             <div className="relative z-10 flex flex-col md:flex-row gap-8 items-center">
               <div className="text-5xl font-black text-blue-500 mb-4 md:mb-0">!</div>
               <div>
-                <h3 className="text-2xl font-bold mb-3">Análisis Editorial</h3>
+                <h3 className="text-2xl font-bold mb-3 font-headline">Análisis Editorial</h3>
                 <p className="text-slate-300 text-lg leading-relaxed max-w-3xl">
                   Una brecha de <strong className="text-white">{diff} puntos porcentuales</strong> revela que la participación no depende solo del ciclo electoral, sino de factores estructurales regionales. Mientras algunos estados mantienen una cultura de voto sólida, otros enfrentan barreras que inhiben la movilización.
                 </p>
@@ -143,7 +143,7 @@ function App() {
 
         <section className="space-y-12 pb-24">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-black tracking-tight text-text-primary">Acto III: El Espejo Social</h2>
+            <h2 className="text-4xl font-black tracking-tight text-text-primary font-headline">Acto III: El Espejo Social</h2>
             <p className="text-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
               Análisis de participación por edad y sexo. (Próximamente con datos sociodemográficos detallados).
             </p>
@@ -151,7 +151,7 @@ function App() {
           <div className="bg-white p-12 rounded-3xl border-4 border-dashed border-slate-200 flex flex-col items-center justify-center text-center space-y-6 min-h-[400px]">
             <div className="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center text-4xl">📊</div>
             <div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">Carga de Microdatos Sociodemográficos</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-2 font-headline">Carga de Microdatos Sociodemográficos</h3>
               <p className="text-slate-500 max-w-md mx-auto">
                 Estamos procesando la base de datos por cohortes de edad y género para identificar la brecha generacional.
               </p>
