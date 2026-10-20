@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { loadParticipationData } from './lib/dataService';
 import { ParticipationChart } from './components/ParticipationChart';
 import { InsightCard } from './components/InsightCard';
