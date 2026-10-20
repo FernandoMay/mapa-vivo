@@ -113,12 +113,12 @@ function App() {
             <InsightCard 
               title="Máxima Participación" 
               value={(maxState.pct_Participación * 100).toFixed(2) + "%"} 
-              description={\Observado en \. El techo de movilización ciudadana.\}
+              description={"Observado en " + maxState.Nombre + ". El techo de movilización ciudadana."}
             />
             <InsightCard 
               title="Mínima Participación" 
               value={(minState.pct_Participación * 100).toFixed(2) + "%"} 
-              description={\Observado en \. El punto crítico de abstención.\}
+              description={"Observado en " + minState.Nombre + ". El punto crítico de abstención."}
             />
             <InsightCard 
               title="Brecha Electoral" 
@@ -151,7 +151,7 @@ function App() {
           <div className="bg-white p-12 rounded-3xl border-4 border-dashed border-slate-200 flex flex-col items-center justify-center text-center space-y-6 min-h-[400px]">
             <div className="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center text-4xl">📊</div>
             <div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">Carga de Microdatos Sociodemográficos</h2>
+              <h3 className="text-2xl font-bold text-slate-800 mb-2">Carga de Microdatos Sociodemográficos</h3>
               <p className="text-slate-500 max-w-md mx-auto">
                 Estamos procesando la base de datos por cohortes de edad y género para identificar la brecha generacional.
               </p>
